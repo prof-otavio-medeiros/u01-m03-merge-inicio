@@ -1,0 +1,116 @@
+main (Computador A)
+----
+
+01. Criei a pasta 'u01-m03-merge' para
+    conter o projeto a ser gerenciado pelo 'git':
+
+    cd /c/Users/ADM/Documents    
+    mkdir prof.otavio.medeiros -> apenas caso a pasta com seu nome ainda não exista
+    cd prof.otavio.medeiros
+    mkdir u01-m03-merge
+    cd u01-m03-merge
+
+02. Adicionei os arquivos 'file01.txt' e 'file02.txt'
+
+    file01.txt
+    ----------
+
+        file01 line01
+        file01 line02
+        file01 line03
+
+    file02.txt
+    ----------
+
+        file02 line01
+        file02 line02
+        file02 line03
+
+03. Criei o ambiente para o 'git'
+
+    git init
+    git config user.name "Prof. Otávio Medeiros"
+    git config user.email prof.otavio.medeiros@gmail.com
+    git add .
+    git commit -m 'main - commit 01'
+
+04. Criei um repositório no 'Git Hub' para armazenar o projeto
+    a ser criado, cujo nome será 'u01-m03-merge'.
+    Caso tenha dúvidas de como fazer isso, assistam o vídeo abaixo:
+
+    Turma FS09
+
+        https://drive.google.com/file/d/1oYEi7QoK5RJiqtbcSuF_SW6PDTgFldHP/view?usp=sharing
+
+    Turma FS10
+
+        https://drive.google.com/file/d/1LpUf2xS0X6JgqSGhSuQxlDzORMb6v3y2/view?usp=sharing
+
+05. Voltei à pasta do projeto local e comandei:
+
+    git remote add origin https://github.com/prof-otavio-medeiros/u01-m03-merge.git
+    git branch -M main
+    git push -u origin main
+
+otavio (Computador B)
+------
+
+01. O 'Computador B' não possui o projeto 'u01-m03-merge'. Para
+    criá-lo a partir do repositório remoto no 'Git Hub', comandei:
+
+    cd /c/Users/ADM/Documents    
+    mkdir prof.otavio.medeiros -> apenas caso a pasta com seu nome ainda não exista
+    cd prof.otavio.medeiros
+    git clone https://github.com/prof-otavio-medeiros/u01-m03-merge.git
+    cd u01-m03-merge
+
+02. A partir da 'branch' de nome 'main' criei a 'branch' de nome 'otavio'
+    e apontei o 'HEAD' para ela
+
+        git checkout -b otavio
+
+03. Alterei o arquivo 'file01.txt' incluindo, ao final, a
+    linha 'file01 line04', ficando o mesmo assim:
+
+    file01.txt
+    ----------
+
+        file01 line01
+        file01 line02
+        file01 line03
+        file01 line04
+
+04. Comandei: 
+
+    git add .
+    git commit -m "otavio - commit 01'
+    git push
+
+05. Acessei o repositório remoto no 'Git Hub'
+
+    https://github.com/prof-otavio-medeiros/u01-m03-merge
+
+06. Pressionei o botão:
+
+    Compare & Pull Request
+
+07. Como não há conflitos, pressionei os botões:
+
+    Create Pull Request
+    Merge Pull Request
+    Confirm Merge
+
+enzo
+
+01. A partir da 'branch' 'main' (*) criei 'branch' enzo e apontei o HEADE para ela;
+02. Alterei o arquivo 'file01.txt' incluindo a 'file 01 line 05';
+03. Comandei o 'git commit -a -m "enzo - commit 01"';
+04. Comandei o 'git push';
+05. Execurtar o 'Compare & Pull Request' (github);
+06. Há conflitos, mas posso comandar 'Create Pull Request';
+07. Comadei 'Resolve Conflicts'
+08. Resolvi os conflitos;
+09. Comnandei 'Mark as Resolved';
+10. Comandei 'Commit Merge';
+11. Comandar 'Merge Pull Request';
+12. Comandar 'Confirm Merge';
